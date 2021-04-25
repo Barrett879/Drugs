@@ -8,8 +8,6 @@ app = Flask(__name__)
 def home():
     return render_template('home.html', options=get_state_options())
 
-@app.route('/funFact')
-
   
   
 if __name__=="__main__":
