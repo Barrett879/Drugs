@@ -5,16 +5,12 @@
     <title>Drugs</title>
   </head>
   <body>
-    <nav class = "navbar navbar-default">
-    </nav>
-    <form action = "/facts">
-       <label for = "state">Choose a State:</label>
-       <select name="state" id="state">
-        {{options}}
-       </select>
-       <br><br>
-       <input type="submit" value = "Submit">
-    </form>
+    <div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+</div>
     
     <p>{{DrugFact}}</p>
     
