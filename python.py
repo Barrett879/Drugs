@@ -26,6 +26,7 @@ def year():
     listOfYears = []
     with open('Drugs.json') as Drugs_data:
         years = json.load(Drugs_data)
+    print(years)
 
     
 
