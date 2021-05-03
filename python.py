@@ -21,6 +21,13 @@ def page2():
 def page3():
     return render_template('page3.html')
 
+@app.route("/year")
+    listOfYears = []
+    with open('Drugs.json') as Drugs_data:
+        years = json.load(Drugs_data)
+
+    
+
   
   
 if __name__=="__main__":
