@@ -27,9 +27,9 @@ def year():
         years = json.load(Drugs_data)
     print(years)
     year = "2015"
-    for county in counties:
-        if not(county["State"] in listOfStates):
-            listOfStates.append(county["State"])
+    for year in years:
+        if year["State"] == "California":
+            listOfYearrs.append(year["Year"])
     options = Markup("<option value=\"" + year + "\">" + year + "</option>")
     return options
     
