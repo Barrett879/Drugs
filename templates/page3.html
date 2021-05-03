@@ -12,7 +12,15 @@
   <a href="#Tobacco">Tobacco</a>
 </div>
     
-    <p>Choose a year</p>
+    <form action = "/year">
+      <br>
+       <label for = "year">Choose a Year:</label>
+       <select name="year" id="year">
+        {{options}}
+       </select>
+       <br><br>
+       <input type="submit" value = "Submit">
+    </form>
     
     
     
