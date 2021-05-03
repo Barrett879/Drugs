@@ -29,7 +29,7 @@ def year():
     year = "2015"
     for year in years:
         if year["State"] == "California":
-            listOfYearrs.append(year["Year"])
+            listOfYears.append(year["Year"])
     print(listOfYears)
     options = Markup("<option value=\"" + year + "\">" + year + "</option>")
     return options
