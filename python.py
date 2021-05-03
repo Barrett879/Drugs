@@ -26,7 +26,9 @@ def year():
     with open('Drugs.json') as Drugs_data:
         years = json.load(Drugs_data)
     print(years)
-    return "2015"
+    
+    options = Markup("<option value=\"" + year + "\">" + year + "</option>")
+    return options
 
     
 
