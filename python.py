@@ -32,7 +32,7 @@ def year():
             listOfYears.append(year["Year"])
     print(listOfYears)
 #     options = Markup("<option value=\"" + year + "\">" + year + "</option>")
-    return options
+#     return options
     
 
     
