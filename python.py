@@ -35,6 +35,12 @@ def year():
     for LOY in listOfYears:
         options += Markup("<option value=\"" + str(LOY) + "\">" + str(LOY) + "</option>")
     return options
+
+@app.route("/year1")
+def year1():
+    #with open('Drugs.json') as Drugs_data:
+        #years = json.load(Drugs_data)
+    
     
 
     
