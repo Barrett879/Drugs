@@ -31,6 +31,7 @@ def year():
         if year["State"] == "California":
             listOfYears.append(year["Year"])
     print(listOfYears)
+    options = ""
     for LOY in listOfYears:
         options += Markup("<option value=\"" + str(LOY) + "\">" + str(LOY) + "</option>")
     return options
