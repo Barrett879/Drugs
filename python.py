@@ -36,7 +36,7 @@ def year():
 
 @app.route("/year1")
 def year1():
-    YEAR = request.args.get('Year')
+    YEAR = request.args.get('year')
     tob = []
     with open('Drugs.json') as Drugs_data:
         Totals = json.load(Drugs_data)
