@@ -48,7 +48,7 @@ def year1():
         options += Markup("<option value=\"" + str(To) + "\">" + str(To) + "</option>")
     return options
     
-    
+@app.route(
 
     
 
