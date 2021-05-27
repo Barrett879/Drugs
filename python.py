@@ -25,8 +25,6 @@ def year():
     listOfYears = []
     with open('Drugs.json') as Drugs_data:
         years = json.load(Drugs_data)
-    print(years)
-    year = "2015"
     for year in years:
         if year["State"] == "California":
             listOfYears.append(year["Year"])
@@ -36,10 +34,18 @@ def year():
         options += Markup("<option value=\"" + str(LOY) + "\">" + str(LOY) + "</option>")
     return options
 
-#@app.route("/year")
-#def year():
-   # with open('Drugs.json') as Drugs_data:
-     #   Tobacco = json.load(Drugs_data)
+@app.route("/year1")
+def year():
+    with open('Drugs.json') as Drugs_data:
+        Totals = json.load(Drugs_data)
+    for T in Totals:
+        if T["Totals"] == "Tobacco":
+            tob.append(T["Tobacco"])
+    print(tob)
+    options = ""
+    for To in tob:
+        options += Markup("<option value=\"" + To + "\">" + To + "</option>")
+    return options
     
     
 
