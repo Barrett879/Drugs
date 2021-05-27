@@ -37,13 +37,13 @@ def year():
 @app.route("/year1")
 def year1():
     YEAR = request.args.get('year')
-    totals = 0
+    total11 = 0
     with open('Drugs.json') as Drugs_data:
         Totals = json.load(Drugs_data)
     for T in Totals:
         if T["State"] == "California" and T["Year"] == int(YEAR):
-            totals = T["Totals"]["Tobacco"]["Cigarette Past Month"]["12-17"]
-    return render_template('page4.html', total11 = total)
+            total11 = T["Totals"]["Tobacco"]["Cigarette Past Month"]["12-17"]
+    return render_template('page4.html', total11 = total11)
 
 
     
