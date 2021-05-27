@@ -37,17 +37,13 @@ def year():
 @app.route("/year1")
 def year1():
     YEAR = request.args.get('year')
-    tob = []
+    totals = 0
     with open('Drugs.json') as Drugs_data:
         Totals = json.load(Drugs_data)
     for T in Totals:
         if T["State"] == "California" and T["Year"] == int(YEAR):
-            tob.append(T["Totals"]["Tobacco"]["Cigarette Past Month"]["12-17"])
-    options = ""
-    for To in tob:
-        options += Markup("<option value=\"" + str(To) + "\">" + str(To) + "</option>")
-    return options
-    
+            totals = T["Totals"]["Tobacco"]["Cigarette Past Month"]["12-17"]
+    return render_template('page4.html', total11 = total)
 
 
     
