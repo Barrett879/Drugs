@@ -41,7 +41,7 @@ def year1():
     with open('Drugs.json') as Drugs_data:
         Totals = json.load(Drugs_data)
     for T in Totals:
-        if T["State"] == "California" and T["Year"] == YEAR:
+        if T["State"] == "California" and T["Year"] == int(YEAR):
             tob.append(T["Totals"]["Tobacco"]["Cigarette Past Month"]["12-17"])
     options = ""
     for To in tob:
