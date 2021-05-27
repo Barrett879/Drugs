@@ -2,10 +2,26 @@
 <html>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <head>
-    <title>Drugs</title>
+    <title>Alcohal</title>
   </head>
   <body>
+    <div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#Alcohal">Alcohal</a>
+  <a href="#Marijuana">Marijuana</a>
+  <a href="#Tobacco">Tobacco</a>
 </div>
+    
+    <form action = "/year">
+      <br>
+       <label for = "year">Choose a Year:</label>
+       <select name="year" id="year">
+        {{options}}
+       </select>
+       <br><br>
+       <input type="submit" value = "Submit">
+    </form>
+    
     
     
   </body>
