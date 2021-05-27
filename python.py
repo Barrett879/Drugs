@@ -36,10 +36,10 @@ def year():
         options += Markup("<option value=\"" + str(LOY) + "\">" + str(LOY) + "</option>")
     return options
 
-@app.route("/year1")
-def year1():
-    #with open('Drugs.json') as Drugs_data:
-        #years = json.load(Drugs_data)
+@app.route("/year")
+def year():
+    with open('Drugs.json') as Drugs_data:
+        Tobacco = json.load(Drugs_data)
     
     
 
