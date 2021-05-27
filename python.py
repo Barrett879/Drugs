@@ -35,13 +35,12 @@ def year():
     return options
 
 @app.route("/year1")
-def year():
+def year1():
+    tob = []
     with open('Drugs.json') as Drugs_data:
         Totals = json.load(Drugs_data)
     for T in Totals:
-        if T["Totals"] == "Tobacco":
-            tob.append(T["Tobacco"])
-    print(tob)
+        tob.append(T["Totals"]["Tobacco"]["Cigarette Past Month"]["12-17"])
     options = ""
     for To in tob:
         options += Markup("<option value=\"" + To + "\">" + To + "</option>")
