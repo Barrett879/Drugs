@@ -56,6 +56,17 @@ def year2():
             total22 = T["Totals"]["Alcohol"]["Abuse Past Year"]["12-17"]
     return render_template('page5.html', total22 = total22)
 
+@app.route("/year3")
+def year3():
+    YEAR = request.args.get('year')
+    total33 = 0
+    with open('Drugs.json') as Drugs_data:
+        Totals = json.load(Drugs_data)
+    for T in Totals:
+        if T["State"] == "California" and T["Year"] == int(YEAR):
+            total33 = T["Totals"]["Marijuana"]["Used Past Year"]["12-17"]
+    return render_template('page6.html', total33 = total33)
+
 
     
 
