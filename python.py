@@ -43,7 +43,7 @@ def year1():
         tob.append(T["Totals"]["Tobacco"]["Cigarette Past Month"]["12-17"])
     options = ""
     for To in tob:
-        options += Markup("<option value=\"" + To + "\">" + To + "</option>")
+        options += Markup("<option value=\"" + str(To) + "\">" + str(To) + "</option>")
     return options
     
     
