@@ -23,8 +23,8 @@ def page3():
 
 def year():
     listOfYears = []
-    with open('Drugs.json') as Drugs_data:
-        years = json.load(Drugs_data)
+    with open('drugs.json') as drugs_data:
+        years = json.load(drugs_data)
     for year in years:
         if year["State"] == "California":
             listOfYears.append(year["Year"])
@@ -38,8 +38,8 @@ def year():
 def year1():
     YEAR = request.args.get('year')
     total11 = 0
-    with open('Drugs.json') as Drugs_data:
-        Totals = json.load(Drugs_data)
+    with open('drugs.json') as drugs_data:
+        Totals = json.load(drugs_data)
     for T in Totals:
         if T["State"] == "California" and T["Year"] == int(YEAR):
             total11 = T["Totals"]["Tobacco"]["Cigarette Past Month"]["12-17"]
@@ -49,8 +49,8 @@ def year1():
 def year2():
     YEAR = request.args.get('year')
     total22 = 0
-    with open('Drugs.json') as Drugs_data:
-        Totals = json.load(Drugs_data)
+    with open('drugs.json') as drugs_data:
+        Totals = json.load(drugs_data)
     for T in Totals:
         if T["State"] == "California" and T["Year"] == int(YEAR):
             total22 = T["Totals"]["Alcohol"]["Abuse Past Year"]["12-17"]
@@ -60,8 +60,8 @@ def year2():
 def year3():
     YEAR = request.args.get('year')
     total33 = 0
-    with open('Drugs.json') as Drugs_data:
-        Totals = json.load(Drugs_data)
+    with open('drugs.json') as drugs_data:
+        Totals = json.load(drugs_data)
     for T in Totals:
         if T["State"] == "California" and T["Year"] == int(YEAR):
             total33 = T["Totals"]["Marijuana"]["Used Past Year"]["12-17"]
