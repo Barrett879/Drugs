@@ -43,7 +43,7 @@ def year1():
     for T in Totals:
         if T["State"] == "California" and T["Year"] == int(YEAR):
             total11 = T["Totals"]["Tobacco"]["Cigarette Past Month"]["12-17"]
-    return render_template('page4.html', total11 = total11, YEAR)
+    return render_template('page4.html', total11 = total11, YEAR = YEAR)
 
 @app.route("/year2")
 def year2():
@@ -54,7 +54,7 @@ def year2():
     for T in Totals:
         if T["State"] == "California" and T["Year"] == int(YEAR):
             total22 = T["Totals"]["Alcohol"]["Abuse Past Year"]["12-17"]
-    return render_template('page5.html', total22 = total22, YEAR)
+    return render_template('page5.html', total22 = total22, YEAR = YEAR)
 
 @app.route("/year3")
 def year3():
@@ -65,7 +65,7 @@ def year3():
     for T in Totals:
         if T["State"] == "California" and T["Year"] == int(YEAR):
             total33 = T["Totals"]["Marijuana"]["Used Past Year"]["12-17"]
-    return render_template('page6.html', total33 = total33, YEAR)
+    return render_template('page6.html', total33 = total33, YEAR = YEAR)
 
 
     
